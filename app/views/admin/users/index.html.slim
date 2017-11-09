@@ -1,0 +1,12 @@
+.container
+  .row
+    table.table.table-striped
+      thead
+        tr
+          th #
+          th Имя
+          th Фамилия
+          th Отчество
+      tbody
+        - users.each do |user|
+          = render 'item', user: user
