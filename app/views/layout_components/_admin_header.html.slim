@@ -1,0 +1,16 @@
+.header.head.navbar-inverse
+  .container
+    .row
+
+      ul.nav.nav-pills.pull-right.top-15
+        - if user_signed_in?
+          li
+            = link_to 'Users', admin_users_url
+          li
+            = link_to 'Logout',
+              destroy_user_session_path, method: :delete,
+              class: 'destroy-session-link'
+
+
+      h3.text-muted
+        = link_to 'DNA Team AdminPanel', admin_users_url

@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title DnaTeam
+    = stylesheet_link_tag    "application", media: "all"
+    = csrf_meta_tags
+    meta content="width=device-width, initial-scale=1" name="viewport"
+  body
+    = render 'layout_components/header'
+    = render 'layout_components/flash_messages'
+    = yield
+
+    = javascript_include_tag 'application', media: 'all'
+    = javascript_tag "$(function() { #{yield(:javascript_code)} });" if content_for? :javascript_code

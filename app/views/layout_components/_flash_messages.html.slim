@@ -1,0 +1,5 @@
+.flash_messages
+  - ['notice', 'error', 'alert'].each do |level|
+    - unless flash[level].blank?
+      p class="alert alert-#{level == 'alert' ? 'danger' : 'success'}"
+        = flash[level]
