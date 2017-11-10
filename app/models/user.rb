@@ -10,4 +10,6 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, :middle_name, :phone, :city, :document, presence: true
   validates :status, inclusion: {in: STATUSES, message: 'invalid value'}
+
+  after_create_commit { UserBroadcastJob.perform_later self }
 end

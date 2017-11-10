@@ -7,6 +7,6 @@
           th Имя
           th Фамилия
           th Отчество
-      tbody
+      tbody#users
         - users.each do |user|
           = render 'item', user: user
