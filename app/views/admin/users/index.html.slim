@@ -4,9 +4,13 @@
       thead
         tr
           th #
+          th Логин
           th Имя
           th Фамилия
           th Отчество
+          th Статус
+          th colspan="3"
+          th документ
       tbody#users
         - users.each do |user|
           = render 'item', user: user

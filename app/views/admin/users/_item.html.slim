@@ -2,8 +2,25 @@ tr{class='user_#{user.id}'}
   td
     = user.id
   td
+    = user.email
+  td
     = user.first_name
   td
     = user.last_name
   td
     = user.middle_name
+  td
+    = user.status
+  td
+    - if user.status != 'approved'
+      = link_to 'Подтвердить', admin_user_url(id: user.id , user: {status: 'declined'}), method: :put, remote: true
+  td
+    - if user.status != 'approved'
+      = link_to 'Отклонить', admin_user_url(id: user.id , user: {status: 'declined'}), method: :put, remote: true
+  td
+    - if user.locked_at.nil?
+      = link_to 'Заблокировать', admin_user_url(id: user.id , user: {locked_at: Time.now }), method: :put, remote: true
+    - else
+      = link_to 'Разблокировать', admin_user_url(id: user.id , user: {locked_at: nil }), method: :put, remote: true
+  td
+    = user.document.url
