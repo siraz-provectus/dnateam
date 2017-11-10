@@ -3,16 +3,15 @@
     .col-md-3
     .col-md-6.jumbotron
       = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'form-horizontal' }) do |f|
-        = f.error_notification
 
-        .form-group
+        .form-inputs
           = f.input :first_name, required: true, autofocus: true
           = f.input :last_name, required: true
           = f.input :middle_name, required: true
-          = f.input :email, required: true
-          = f.input :phone, required: true
+          = f.input :email, required: true, placeholder: 'user@domain.com'
+          = f.input :phone, required: true, as: :tel, placeholder: '+7xxxxxxxxxx'
           = f.input :city, required: true
-          = f.input :document, required: true, as: :file
+          = f.input :document, required: true, as: :file, hint: 'Згрузите файл подтверждающий вашу личность'
           = f.input :password, required: true
           = f.input :password_confirmation, required: true
 

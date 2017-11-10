@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'jquery-rails'
+gem 'russian'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets

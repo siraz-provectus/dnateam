@@ -1,0 +1,5 @@
+ru:
+  messages:
+    invalid_value: "%{value} невалидное значение"
+    cannot_blank: "не может быть пустым"
+    wrong_format: "%{value} неправильный формат"
