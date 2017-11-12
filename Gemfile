@@ -52,6 +52,12 @@ gem "rails_12factor", group: :production
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'faker'
+
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
