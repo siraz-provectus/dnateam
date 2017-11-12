@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
-  channel_prefix: dnateam_production
+  url: redis://redistogo:766d37ef0de1ad3cf0ad3c61f6f80cf3@angelfish.redistogo.com:10584/
+

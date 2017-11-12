@@ -23,6 +23,7 @@ gem 'russian'
 gem 'dotenv-rails'
 gem 'remotipart'
 gem 'draper'
+gem 'redis'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
