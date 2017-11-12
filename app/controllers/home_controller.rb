@@ -7,7 +7,10 @@ class HomeController < ApplicationController
   private
 
   def add_flash_message
-    flash.notice =  if current_user.status == 'pending'
+    flash.notice =  if current_user.url.present? && current_user.status == 'approved'
+                      "Добро пожаловать, #{current_user.first_name} \n
+                      вы успешно авторизовались через социальную сеть"
+                    elsif current_user.status == 'pending'
                       "Ваша заявка на регистрацию находится на рассмотрении у модератора"
                     elsif current_user.status == 'approved'
                       "Спасибо #{current_user.first_name}, \n

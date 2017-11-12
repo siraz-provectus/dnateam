@@ -3,3 +3,8 @@ ru:
     invalid_value: "%{value} невалидное значение"
     cannot_blank: "не может быть пустым"
     wrong_format: "%{value} неправильный формат"
+    extension_whitelist_error: 'sdfsdfscvxcvxc'
+
+  errors:
+    messages:
+      extension_whitelist_error: 'неподходящий формат документа'

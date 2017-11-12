@@ -8,9 +8,10 @@
           th Имя
           th Фамилия
           th Отчество
+          th Телефон
+          th Город
           th Статус
-          th colspan="3"
-          th документ
+          th
       tbody#users
         - users.each do |user|
           = render 'item', user: user

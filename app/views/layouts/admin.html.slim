@@ -7,7 +7,8 @@ html
     = action_cable_meta_tag
   body
     = render 'layout_components/admin_header'
-    = render 'layout_components/flash_messages'
+    .js-flash
+      = render 'layout_components/flash_messages'
     = yield
 
     = javascript_include_tag 'application', media: 'all'
