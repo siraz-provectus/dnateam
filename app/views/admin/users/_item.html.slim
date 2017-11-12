@@ -22,11 +22,7 @@ tr{class='user_#{user.id}'}
         span.caret
       ul.dropdown-menu{ role="menu" aria-labelledby="dLabel"}
         li
-          - if user.url?
-            = link_to 'Просмотреть', user.url
-          - else
-            a{href="#{user.document.url}" target="_blank"}
-              | Просмотреть
+          = link_to 'Просмотреть', user.url? ? user.url : user.document.url, target: "blank"
         - unless user.url?
           li
             a{href="#{user.document.url}" download}
