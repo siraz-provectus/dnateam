@@ -9,4 +9,6 @@
         .form-actions
           = f.button :submit, "Log in"
 
+      = link_to "Sign in with Vkontakte", user_vkontakte_omniauth_authorize_path, method: :post
+
     .col-md-3
